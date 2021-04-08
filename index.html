@@ -6,8 +6,9 @@
     <title>Визитка</title>
     <link rel="shortcut icon" href="./img/unicorn.png">
     <link rel="stylesheet" type="text/css"  href="./style.css">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js"
-    crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js"crossorigin="anonymous"></script>
 
     
 </head>
@@ -19,7 +20,7 @@
           <ul class="menu">
              <li><a href="#main">Главная</a></li>
              <li><a href="#about">Обо мне</a></li>
-             <li><a href="#skills">Skills</a></li>
+             <li><a href="#skills" class="menu-skills">Skills</a></li>
              <li><a href="#portfolio">Портфолио</a></li>
              <li><a href="#contact-form">Контакты</a></li>
          </ul>         
@@ -35,68 +36,82 @@
           <a href="https://vk.com/"><i class="fab fa-vk"></i></a>
           <a href="https://ru-ru.facebook.com/"><i class=" fab fa-facebook-f"></i></a>
       </div>       
-       <div class="arrow">           
-       </div>
+       <a href="#about" class="arrow"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
   </section>    
   <section id="about">    
       <div class="about model img">
-        <img src="./img/4444.png"  alt="model">
+                <img data-aos="zoom-out-right" src="./img/4444.png"  alt="model">
         </div>       
       <div class="about-text">
-          <h1>Обо мне</h1>
-          <h2>Начинающий программист или хочу так думать</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo molestias mollitia iure earum eius accusantium dolor assumenda, veniam magni possimus ducimus, ex unde inventore voluptate sint tempora debitis architecto in.</p>
-            <button><a href="#skills">More Details</a></button>
+          <h1 data-aos="slide-left">Обо мне</h1>
+          <h2 data-aos="slide-left">Начинающий программист или хочу так думать</h2>
+          <p data-aos="slide-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo molestias mollitia iure earum eius accusantium dolor assumenda, veniam magni possimus ducimus, ex unde inventore voluptate sint tempora debitis architecto in.</p>
+            <button data-aos="slide-left"><a href="#skills">More Details</a></button>
       </div>         
   </section>  
   <section id="skills">  
-     <div class="skills-heading">       
-       <h1>My Skills</h1>    
-         <p>HTML</p>
-  <div class="container">
-      <div class="sk one">90%</div>
+    <h1 class="sk-heading">My Skills</h1>   
+    <div class="sk-container">
+ <div class="skills1">
+   <span class = "Name">HTML</span>
+   <div class="percent">
+     <div class="progress" style="width: 95%"></div>
+   </div>
+   <span class="value">95%</span>
+ </div>
+ <div class="skills1">
+  <span class = "Name">CSS</span>
+  <div class="percent">
+    <div class="progress" style="width: 80%"></div>
   </div>
-    <p>CSS</p>
-  <div class="container">
-      <div class="sk two">60%</div>
+  <span class="value">80%</span>
+</div>
+<div class="skills1">
+  <span class = "Name">Javascript</span>
+  <div class="percent">
+    <div class="progress" style="width: 60%"></div>
   </div>
-  <p>JS</p>
-  <div class="container">
-      <div class="sk three">35%</div>
+  <span class="value">60%</span>
+</div>
+<div class="skills1">
+  <span class = "Name">React</span>
+  <div class="percent">
+    <div class="progress" style="width: 40%"></div>
   </div>
-  <p>PHP</p>
-  <div class="container">
-      <div class="sk four">25%</div>
-  </div>
-  <p>Git</p>
+  <span class="value">40%</span>
+</div>
+</div>
+  <!-- <p>Git</p>
   <div class="container">
       <div class="sk five">15%</div>
-  </div>
-  </div>
+  </div>  -->
   </section>  
   <section id="portfolio">  
   <h1 class="p-heading">Портфолио</h1>  
   <div class="p-container">  
   <div class="p-box">  
   <div class="text-overlay">
-  <h1>Web Design</h1>
-  <p>Project</p>
+  <h1>Coding<br><span>uuuuu</span></h1> 
   </div>  
-  <img src="./img/1.png" alt="portfolio">
+  <div class="imgBox">
+  <img src="./img/444.jpg" alt="portfolio">
+</div>
   </div>  
   <div class="p-box">    
     <div class="text-overlay">
-    <h1>FrontEnd</h1>
-    <p>Project</p>
+    <h1>Web-design<br><span>uuuuu</span></h1> 
     </div>   
-    <img src="./img/2.png" alt="portfolio">
+    <div class="imgBox">
+      <img src="./img/555.jpg" alt="portfolio">
+    </div>
     </div>    
   <div class="p-box">    
     <div class="text-overlay">
-    <h1>Branding</h1>
-    <p>Project</p>
+    <h1>Lounch<br><span>uuuuu</span></h1>    
     </div>    
-    <img src="./img/3.png" alt="portfolio">
+    <div class="imgBox">
+      <img src="./img/888.png" alt="portfolio">
+    </div>
     </div>   
   </div>
   </section>    
@@ -125,7 +140,6 @@
     <button id="sendButton">Отправить</button>
     </div>
     </form>
-
     </section>
     <section id="post-contact">
       <div class="post-container">
@@ -176,11 +190,23 @@
       </div>
     </section>
 
-  <button class="sendButton">Отправить</button>
-   <div id="output"></div> 
-
+  <!-- <button class="sendButton">Отправить</button>
+   <div id="output"></div>  -->
+<!-- 
+   <label for="dnd">What are the best classes in D&D?</label>
+   <select id="dnd" multiple>
+     <option value="bard">Bard</option>
+     <option value="fighter">Fighter</option>
+     <option value="druid">Druid</option>
+     <option value="paladin">Paladin</option>
+     <option value="rogue">Rogue</option>
+     <option value="wizard">Wizard</option>
+   </select> -->
 
  <script>
+  
+  const dnd = document.querySelector('#dnd');
+
   const iconBox = document.querySelectorAll('.iconBox');
   const contentBox = document.querySelectorAll('.contentBox');
 
@@ -200,8 +226,20 @@
 
   }
 
-  
+
+const progs = document.querySelectorAll('.progress');
+const msk = document.querySelector('.menu-skills');
+msk.addEventListener('click', ()=>{
+  progs.forEach(prog=>prog.classList.add('progress-start'))
+  // prog.classList.add('progress-start')
+})
+ 
+ 
+
 </script>   
+
+
+
 
 
 
@@ -229,8 +267,19 @@
    } ------------>
 
 
-  
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({
+  duration: 700,
+  offset: 120,
+  easing: 'ease',
+  // once: true, 
+  mirror: true,
+  anchorPlacement: 'top-bottom'
+})</script>
 
 </body>
 </html>  
